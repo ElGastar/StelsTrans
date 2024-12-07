@@ -7,15 +7,15 @@ $(function() {
 	var formMessages = $('.ajax-response');
 
 	// Set up an event listener for the contact form.
-	$(form).submit(function(e) {
+	//$(form).submit(function(e) {
 		// Stop the browser from submitting the form.
-		e.preventDefault();
+	//	e.preventDefault();
 
 		// Serialize the form data.
-		var formData = $(form).serialize();
+	//	var formData = $(form).serialize();
 
-		// Submit the form using AJAX.
-		$.ajax({
+	//	// Submit the form using AJAX.
+	////	$.ajax({
 			type: 'POST',
 			url: $(form).attr('action'),
 			data: formData

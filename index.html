@@ -964,23 +964,24 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-10">
                             <div class="support-form text-center">
-                                <form action="send.php" method="post" id="contact">
+                                <form action="" method="post" id="contact">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <input type="text" name="name" placeholder="ИМЯ *">
+                                            <input type="text" name="name" placeholder="ИМЯ *"><span class="danger"></span>
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="text" name="sname"  placeholder="Фамилия *">
+                                            <input type="text" name="sname"  placeholder="Фамилия *"><span class="danger"></span>
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="email" name="email" placeholder="Ваш E-mail *">
+                                            <input type="email" name="email" placeholder="Ваш E-mail *"><span class="danger"></span>
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="tel" name="phone" placeholder="Ваш номер телефона *">
+                                            <input type="tel" name="phone" placeholder="Ваш номер телефона *"><span class="danger"></span>
                                         </div>
                                     </div>
-                                    <textarea name="message" id="message" placeholder="Сообщения"></textarea>
-                                    <button class="btn red-btn" type="submit">Отправить</button>
+                                    <textarea name="message" id="message" placeholder="Сообщения"></textarea><span class="danger"></span>
+                                    
+                                    <button class="btn red-btn" id="submit" type="submit">Отправить</button><span class="danger"></span>
                                 </form>
                             </div>
                         </div>
@@ -1205,7 +1206,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-7">
                             <div class="copyright-text">
-                                <p>Copyright© <span>StarTask </span> | All Rights Reserved</p>
+                                <p>Copyright© <span>StarTask </span> | All Rights Reser</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-5">
@@ -1229,7 +1230,7 @@
         <script src="js/isotope.pkgd.min.js"></script>
         <script src="js/slick.min.js"></script>
         <script src="js/jquery.meanmenu.min.js"></script>
-        <script src="js/ajax-form.js"></script>
+        
         <script src="js/wow.min.js"></script>
         <script src="js/aos.js"></script>
         <script src="js/paroller.js"></script>

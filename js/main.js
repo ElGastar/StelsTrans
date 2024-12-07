@@ -1,5 +1,44 @@
 (function ($) {
 "use strict";
+//ajax from ststrans opld
+$('#contact').submit(function(){
+  var errors = false;
+  $(this).find('span').empty();
+
+  $(this).find('input, textarea').each(function(){
+    if( $.trim( $(this).val() ) == '' ) {
+      errors = true;
+      $(this).next().text( 'Не заполнено поле ' + $(this).attr('placeholder'));
+    }
+  });
+
+  if( !errors ){
+    var data = $('#contact').serialize();
+    $.ajax({
+      url: 'send.php',
+      type: 'POST',
+      data: data,
+      beforeSend: function(){
+        $('#submit').attr('placeholder','Отправляю');
+      },
+      success: function(res){
+        if( res == 1 ){
+          $('#contact').find('input:not(#submit), textarea').val('');
+          $('#contact').find('#submit').val('Отправлено');
+          
+        }else{
+          $('#contact').find('#submit').val('Ошибка');
+                      alert('Ошибка отправления почты,попробуйте позднее');
+        }
+      },
+      error: function(){
+        alert('Ошибка!');
+      }
+    });
+  }
+
+  return false;
+});
 
 // preloader
 function loader() {

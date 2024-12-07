@@ -9,7 +9,7 @@ if( $_POST ){
 	$mail->Host = 'smtp.mail.ru';
 	$mail->SMTPAuth = true;
 	$mail->Username = 'alex_win_1@bk.ru'; // логин от вашей почты
-	$mail->Password = 'Xasanov1991!'; // пароль от почтового ящика
+	$mail->Password = 'FTK1FkrN7qrj2E9LzEqu'; // пароль от почтового ящика
 	$mail->SMTPSecure = 'ssl';
 	$mail->Port = '465';
 	
